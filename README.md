@@ -8,37 +8,33 @@
 1. docker起動
 
 ```bash
-## execute source dir
-# build and start
-$ docker-compose up -d
-## only build
+# ビルドのみ
 $ docker-compose build
+
+# ビルドとコンテナの起動
+$ docker-compose up -d
+
+# コンテナの停止・削除
+$ docker-compose down
 ```
 
-2. webサイトの表示確認
+2. webサイトの表示確認（phpinfo）
 
-下記にアクセス: 
+    1. `_test/phpinfo.php`を`app/`にコピー（確認後、適宜コピーしたファイルを削除してください）。
+
+    2. 下記にアクセス:
 http://localhost:8080/phpinfo.php
 
 3. メール送信の確認
 
-    1. 下記にアクセス (Webページからメール送信): 
+    1. `_test/test_mail.php`を`app/`にコピー（確認後、適宜コピーしたファイルを削除してください）。
+
+    2. 下記にアクセス (Webページからメール送信): 
 http://localhost:8080/test_mail.php
 
-    2. 下記にアクセス (メール受信用ページ確認): 
+    3. 下記にアクセス (メール受信用ページ確認): 
 http://localhost:8025/
 
+4. phpMyAdminへのアクセス
 
-## 付録
-
-### ホスト名の設定
-
-```bash
-# /etc/hosts
-127.0.0.1       localhost       web.mailform.local      mailhog.mailform.local
-```
-
-下記のURLでアクセス:
-
-- web: http://web.mailform.local:8080
-- mail: http://mailhog.mailform.local:8025
+http://localhost:8306/
