@@ -1,4 +1,4 @@
-# Apache＋php7.3＋Mysql5.6＋MailhogのDocker環境
+# Apache2.4＋php7.3＋Mysql5.6＋MailhogのDocker環境
 
 ## インストール要件
 
